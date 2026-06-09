@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disco Spotify - Premium Auth</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;800;900&family=Syncopate:wght@700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="auth-container">
+        <div class="logo-section">
+            <div class="disco-ball-glow">
+                <img src="WhatsApp Image 2026-06-05 at 5.08.49 PM.jpeg" alt="Disco Logo" class="neon-logo-img">
+            </div>
+            <h1 class="glitch-text">SPOTIFY</h1>
+        </div>
+
+        <div class="auth-box" id="login-box">
+            <h2>Iniciar Sesión</h2>
+            
+            <div class="role-selector">
+                <button type="button" id="btn-login-cliente" class="active">Oyente</button>
+                <button type="button" id="btn-login-admin">Administrativo</button>
+            </div>
+
+            <form id="form-login" action="login.php" method="POST">
+                <input type="hidden" name="rol" id="login-rol" value="cliente">
+
+                <div class="input-group">
+                    <label><i class="fa-solid fa-envelope"></i> Correo Electrónico</label>
+                    <input type="email" id="login-correo" name="correo" placeholder="nombre@correo.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label><i class="fa-solid fa-lock"></i> Contraseña</label>
+                    <input type="password" name="contrasena" placeholder="••••••••" required>
+                </div>
+
+                <div class="input-group" id="group-codigo-admin" style="display: none;">
+                    <label><i class="fa-solid fa-id-card"></i> Código de Empleado</label>
+                    <input type="text" id="login-codigo" name="codigo_empleado" placeholder="Ej: SM-2026">
+                </div>
+
+                <button type="submit" class="btn-primary">Entrar a la Plataforma</button>
+                
+                <div id="error-message" class="alert-danger" style="display: none;">
+                    <i class="fa-solid fa-triangle-exclamation"></i> Acceso denegado. Credenciales incorrectas.
+                </div>
+            </form>
+            <p class="switch-form">¿No tienes cuenta? <a href="#" id="go-to-register">Regístrate aquí</a></p>
+        </div>
+
+        <div class="auth-box" id="register-box" style="display: none;">
+            <h2>Crear Cuenta</h2>
+            
+            <div class="role-selector">
+                <button type="button" id="btn-reg-cliente" class="active">Nuevo Oyente</button>
+                <button type="button" id="btn-reg-admin">Nuevo Admin</button>
+            </div>
+
+            <form id="form-registro" action="registro.php" method="POST">
+                <input type="hidden" name="rol" id="register-rol" value="cliente">
+
+                <div class="input-group">
+                    <label><i class="fa-solid fa-user"></i> Nombre Completo</label>
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                </div>
+
+                <div class="input-group">
+                    <label><i class="fa-solid fa-envelope"></i> Correo Electrónico</label>
+                    <input type="email" name="correo" placeholder="ejemplo@correo.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label><i class="fa-solidxl fa-lock"></i> Contraseña</label>
+                    <input type="password" name="contrasena" placeholder="Crea una contraseña" required>
+                </div>
+
+                <div class="admin-fields" id="register-admin-fields" style="display: none;">
+                    <div class="input-group">
+                        <label><i class="fa-solid fa-building-shield"></i> Nombre de la Disquera</label>
+                        <input type="text" id="reg-disquera" name="disquera" placeholder="Ej: Sony Music">
+                    </div>
+                    <div class="input-group">
+                        <label><i class="fa-solid fa-key"></i> Asignar Código de Empleado</label>
+                        <input type="text" id="reg-codigo" name="codigo_empleado" placeholder="Ej: WM-4402">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary btn-register">Registrar Cuenta</button>
+            </form>
+            <p class="switch-form">¿Ya tienes cuenta? <a href="#" id="go-to-login">Inicia sesión</a></p>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+</html>

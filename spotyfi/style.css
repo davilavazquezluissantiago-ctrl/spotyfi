@@ -1,0 +1,200 @@
+/* RESET DE ESTILOS Y FUENTE BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: #0b0c0e; /* Un negro más profundo y cinematográfico */
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.auth-container {
+    width: 100%;
+    max-width: 440px;
+    background: linear-gradient(145deg, #16181c, #0f1013); /* Sutil degradado oscuro */
+    padding: 45px 35px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+}
+
+/* NUEVA SECCIÓN DEL LOGO BRILLANTE */
+.logo-section {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.disco-ball-glow {
+    position: relative;
+    display: inline-block;
+    width: 110px;
+    height: 110px;
+    margin-bottom: 15px;
+}
+
+.neon-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    /* Aura de brillo verde intenso basado en tu imagen */
+    box-shadow: 0 0 25px rgba(29, 215, 96, 0.5), 
+                0 0 50px rgba(29, 215, 96, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.neon-logo-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px rgba(29, 215, 96, 0.7), 
+                0 0 70px rgba(29, 215, 96, 0.4);
+}
+
+/* TEXTO ESTILIZADO CON ESTILO GLITCH/NEÓN (Inspirado en imagen 2) */
+.glitch-text {
+    font-family: 'Syncopate', sans-serif; /* Letra ultra ancha y estilosa */
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 6px;
+    color: #ffffff;
+    text-transform: uppercase;
+    /* Efecto de sombra sutil cian y roja en los bordes como tu referencia */
+    text-shadow: 2px 0 #ff0055, -2px 0 #00ffcc, 0 0 10px rgba(255,255,255,0.2);
+}
+
+/* ENCABEZADOS DE FORMULARIO */
+.auth-box h2 {
+    font-family: 'Orbitron', sans-serif; /* Fuente tecnológica */
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #f3f3f3;
+}
+
+/* SELECTOR DE ROL INTERACTIVO */
+.role-selector {
+    display: flex;
+    background-color: #1c1e22;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    padding: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.role-selector button {
+    flex: 1;
+    background: none;
+    border: none;
+    color: #7c828d;
+    padding: 12px;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: 'Orbitron', sans-serif;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.role-selector button.active {
+    background-color: #1DB954; /* Verde brillante en lugar de blanco puro */
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(29, 215, 96, 0.3);
+}
+
+/* INPUTS ESTILIZADOS */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #646b75;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.input-group input {
+    width: 100%;
+    background-color: #1c1e22;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    padding: 14px 16px;
+    color: #FFF;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #1DB954;
+    background-color: #22252a;
+    box-shadow: 0 0 10px rgba(29, 215, 96, 0.15);
+}
+
+/* BOTÓN DE ACCESO COMPACTO Y FUERTE */
+.btn-primary {
+    width: 100%;
+    background-color: #1DB954;
+    color: #FFF;
+    border: none;
+    padding: 15px;
+    font-size: 13px;
+    font-weight: 900;
+    font-family: 'Orbitron', sans-serif;
+    border-radius: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.2s ease;
+    margin-top: 10px;
+    box-shadow: 0 4px 15px rgba(29, 215, 96, 0.2);
+}
+
+.btn-primary:hover {
+    background-color: #1ed760;
+    box-shadow: 0 6px 20px rgba(29, 215, 96, 0.4);
+    transform: translateY(-1px);
+}
+
+/* LINKS INTERNOS */
+.switch-form {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 13px;
+    color: #646b75;
+}
+
+.switch-form a {
+    color: #1DB954;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.switch-form a:hover {
+    text-decoration: underline;
+}
+
+.alert-danger {
+    background-color: #ff3355;
+    color: #FFF;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 600;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
